@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Slide Toggle Navigation Demo</title>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<style>
+@import url(http://fonts.googleapis.com/css?family=roboto);
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background: #1abc9c;
+  display: none;
+  width: 100%;
+}
+
+.menu ul {
+  font-family: 'roboto', serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.menu ul li:hover { background: #16a085; }
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-toggle {
+  background: none;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+.menu-toggle a {
+  text-decoration: none;
+  color: #333;
+}
+
+.about {
+  width: 100%;
+  font-family: 'roboto', serif;
+  font-size: 40px;
+  margin-top: 100px;
+  text-align: center;
+  color: #333;
+}
+</style>
+</head>
+
+<body>
+<div class="menu">
+  <ul>
+    <a href="#">
+    <li>I. Home</li>
+    </a> <a href="#">
+    <li>II. About</li>
+    </a> <a href="#">
+    <li>III. Services</li>
+    </a> <a href="#">
+    <li>IV. Blog</li>
+    </a> <a href="#">
+    <li>VI. Contact</li>
+    </a>
+  </ul>
+</div>
+<div class="menu-toggle"> <a href="#"><i class="fa fa-angle-double-down"></i></a> </div>
+<div class="about">Responsive Slide Toggle Navigation</div>
+<div class="jquery-script-ads" style="margin:30px auto" align="center"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+			$(".menu-toggle a").click(function(){ 
+				$(".menu").slideToggle(700);
+			});
+		});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

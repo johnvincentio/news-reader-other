@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-mobile-slide-menu.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-mobile-slide-menu.js"></script>
+    <title>jQuery Mobile Slide Menu Plugin Example</title>
+</head>
+
+<body>
+    <div id="side-menu">
+        <ul>
+            <li><a href="/">Main</a><span class="icon"></span></li>
+            <li><a href="/page-2/">Page 2</a><span class="icon"></span></li>
+            <li><a href="/page-3/">Page 3</a><span class="icon"></span></li>
+            <li><a href="/page-4/">Page 4</a><span class="icon"></span></li>
+        </ul>
+    </div>
+    <div data-role="page" id="about-the-band" data-title="Page Title" data-theme="b" class="pages">
+        <div data-role="header" data-theme="b"> <a href="#" class="showMenu" data-role="button" data-icon="grid" data-iconpos="notext">Menu</a>
+            <h1>Header</h1>
+        </div>
+        <div data-role="content">
+            <div class="jquery-script-ads">
+                <script type="text/javascript">
+                    <!--
+                    google_ad_client = "ca-pub-2783044520727903";
+                    /* jQuery_demo */
+                    google_ad_slot = "2780937993";
+                    google_ad_width = 728;
+                    google_ad_height = 90;
+                    //-->
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#side-menu').slideMenu();
+        });
+    </script>
+</body>
+
+</html>
