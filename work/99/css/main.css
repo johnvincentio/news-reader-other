@@ -121,8 +121,14 @@ footer {
   padding: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   /* line 114, ../scss/main.scss */
+  .sidebar-left {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  /* line 121, ../scss/main.scss */
   .page-ads {
     display: none;
   }

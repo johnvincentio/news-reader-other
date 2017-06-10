@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="resizable.css">
+    <style>
+        #resize-me {
+            border: 2px solid #333;
+            background-color: #1af;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            min-width: 80px;
+            min-height: 40px;
+        }
+
+        #and-me {
+            border: 2px solid #333;
+            background-color: #fa1;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            min-width: 80px;
+            min-height: 40px;
+        }
+
+        #one,
+        #two {
+            display: inline-block;
+            border: 2px solid #333;
+            background-color: #1fa;
+            color: white;
+            height: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="resize-me">
+        resize-me
+    </div>
+    <div id="and-me">
+        and-me but only horizontally
+    </div>
+
+    <div id="one">
+        right
+    </div>
+    <div id="two">
+        with alert on stop
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="resizable.js"></script>
+
+    <script>
+        jQuery(function() {
+            jQuery('#resize-me').resizable()
+            jQuery('#and-me').resizable({
+                direction: 'horizontal'
+            })
+            jQuery('#one').resizable({
+                direction: 'right'
+            })
+            jQuery('#two').resizable({
+                direction: 'bottom',
+                stop: function() {
+                    alert('Yay!');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

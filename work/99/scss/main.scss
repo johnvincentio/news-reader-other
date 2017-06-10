@@ -110,6 +110,13 @@ footer {
     padding: 10px;
 }
 
+@media(max-width: 600px) {
+    .sidebar-left {
+        display: none;
+    }
+}
+
+
 @media(max-width: 900px) {
     .page-ads {
         display: none;
