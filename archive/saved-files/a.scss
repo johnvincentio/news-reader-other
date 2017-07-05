@@ -1,0 +1,182 @@
+
+* We want to give the content area some more padding */
+.content {
+    padding: 1em 1em 3em;
+}
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbon {
+    color: $color-white;
+}
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #1f8dd6;
+}
+.content-subhead i {
+    margin-right: 7px;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: #6288a5;
+    font-size: 16px;
+    font-family: nyt-franklin,arial,helvetica,sans-serif;
+    line-height: 21px;
+}
+
+
+.passwordFieldContainer {
+    position: relative;
+}
+
+.passwordFieldContainer input.password {
+    padding-right: 7em;
+}
+input[type="password"] {
+    letter-spacing: 3px;
+}
+.passwordFieldContainer input[type="text"] {
+    display: none;
+}
+.passwordFieldContainer .password-toggle-visibility {
+    position: absolute;
+    height: 54px;
+    top: 0;
+    right: 0.9em;
+    font-size: .8125em;
+    color: #326891;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.icon-oauth-facebook {
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22110%22%20height%3D%…%22%20fill%3D%22%233C5A99%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+}
+.icon-oauth-facebook-hover {
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22110%22%20height%3D%…%22%20fill%3D%22%23526bc8%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+}
+.icon {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+
+.sso-button.sso-button-facebook .icon {
+    background-size: 0.85em;
+}
+
+.sso-button.sso-button-facebook .icon-oauth-facebook-hover {
+    background-color: transparent;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.icon-oauth-facebook-hover {
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22110%22%20height%3D%…%22%20fill%3D%22%23526bc8%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+}
+
+.sso-button.sso-button-google .icon {
+    background-size: 1.4em;
+}
+
+.icon-oauth-google {
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22180%22%20height%3D%…853%22%2F%3E%3Cpath%20d%3D%22M0%200h18v18H0%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+}
+
+
+
+.sso-button {
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    -ms-border-radius: .2em;
+    border-radius: .2em;
+    border-width: 2px;
+    border-style: solid;
+    color: #fff;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sso-button .icon {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: calc(3em);
+    width: calc(3em);
+    -webkit-border-radius: .1em;
+    -moz-border-radius: .1em;
+    -ms-border-radius: .1em;
+    border-radius: .1em;
+    background-color: #fff;
+    background-position: center center;
+}
+
+.sso-button.sso-button-facebook {
+    background-color: #3c5a99;
+    border-color: #3c5a99;
+}
+
+.sso-button.sso-button-google {
+    background-color: #4285f4;
+    border-color: #4285f4;
+}
+
+
+
+
+/* ----------------------------------- */
+/* Login */
+/* ----------------------------------- */
+
+// #login nav {
+//     text-align: center;
+//     padding: 15px 0;
+// }
+
+// #login nav p,
+// #login nav p a {
+//     color: white;
+// }
+
+// .section-contact {
+//     @include linearGradient($group-from-background-color, $group-to-background-color);
+
+//     input[type], textarea {
+//         border: 2px solid #ddd;
+//         box-shadow: none;
+//         font-size: 100%;
+// //        width: 100%;
+//         margin-bottom: 1em;
+//     }
+
+// }
+
+

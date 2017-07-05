@@ -1,0 +1,96 @@
+<div class="formBox">
+        <div class="border signUpForm">
+
+        
+        
+                <h2>Log In</h2>
+        
+        <p class="row auth-link-text">Don't have an account? <a href="https://myaccount.nytimes.com/register?URI=https%3A%2F%2Fwww.nytimes.com" class="auth-link">Sign up here &raquo;</a></p>
+
+        
+        
+        <form id="login-form" method="POST" novalidate>
+
+                        <span id="js_success_redirect_url" data-url="https://www.nytimes.com?"></span>
+<div class="sso-buttons">
+    <div class="sso-button-container">
+        <a data-device="desktop" data-name="facebook" data-redirect="https://www.nytimes.com?" href="/oauth/facebook-link?type=login&amp;flow=DSLI&amp;URI=https%3A%2F%2Fwww.nytimes.com" id="js-facebook-oauth-login" class="sso-button sso-button-facebook">
+            <span class="icon icon-oauth-facebook">
+                <span class="icon icon-oauth-facebook-hover"></span>
+            </span>
+            <span class="sso-button-login-text">Facebook</span>
+        </a>
+    </div>
+    <div class="sso-button-container">
+        <a data-device="desktop" data-name="google" data-redirect="https://www.nytimes.com?" href="/oauth/google-link?type=login&amp;flow=DSLI&amp;URI=https%3A%2F%2Fwww.nytimes.com" id="js-google-oauth-login" class="sso-button sso-button-google">
+            <span class="icon icon-oauth-google"></span>
+            <span class="sso-button-login-text">Google</span>
+        </a>
+    </div>
+</div>
+
+<div class="oauth-separator-wrap">
+    <span class="oauth-separator-txt">or</span>
+</div>
+
+<!--
+    <script type="text/javascript">if(typeof window.NYTD==='undefined'){window.NYTD={};}
+window.NYTD.success_redirect_url=document.getElementById('js_success_redirect_url').getAttribute('data-url');</script>    
+<script type="text/javascript" src="https://myaccount.nytimes.com/js/common/oauth/smartlock.js"></script>
+<script type="text/javascript" src="https://myaccount.nytimes.com/js/common/oauth/login.js"></script>
+-->
+            <input type="hidden" name="is_continue" value="false">
+            <input type="hidden" name="expires" value="1498057624">
+            <input type="hidden" name="token" value="f875832c50a3ed865d6fa69dee55e051cc12f9fe">
+
+            <input type="email" placeholder="Email Address" id="userid" class="input " name="userid" maxlength="64" value="" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="username">
+            <div class="passwordFieldContainer">
+                <input class="input password " placeholder="Password" type="password" id="password1" name="password" autocapitalize="off" autocomplete="current-password" maxlength="255" required>
+                <input class="input password " placeholder="Password" type="text" id="password-text" name="password_text" autocapitalize="off" autocomplete="off" maxlength="255" required>
+                <span class="password-toggle-visibility"><span></span></span>
+            </div>
+            <div class="error-message auto-sign-in-error hidden"></div>
+                <div class="row clearfix auth-form-links">
+                <label for="remember-me" class="pull-left">
+                    <input type="checkbox" name="remember" value="true" checked="checked" id="remember-me"> Remember Me
+                </label>
+                <a href="/seg/forgot-password?EXIT_URI=https%3A%2F%2Fwww.nytimes.com%3F" class="pull-right forgot-link">Forgot password?</a>
+            </div>
+
+            <div class="row center buttons">
+                <button id="submit-button" class="button primary auth-button" type="submit"><span>Log In</span></button>
+            </div>
+
+            <div id="recaptcha-demo" class="g-recaptcha" data-sitekey="6LdB7B8UAAAAAKyYwnvRq3JYGou8VPh79yq--LaG" data-callback="onSuccess" data-bind="submit-button">
+        </div>
+<script type="text/javascript">var onSuccess=function(response){document.getElementById("login-form").submit();};</script>
+
+    </form>
+        
+        
+            </div>
+    </div>
+
+
+
+<section>
+<div class="sso-buttons">
+    <div class="sso-button-container">
+        <a data-device="desktop" data-name="facebook" data-redirect="" href="" 
+                    id="js-facebook-oauth-login" class="sso-button sso-button-facebook">
+            <span class="icon icon-oauth-facebook">
+                <span class="icon icon-oauth-facebook-hover"></span>
+            </span>
+            <span class="sso-button-login-text">Facebook</span>
+        </a>
+    </div>
+    <div class="sso-button-container">
+        <a data-device="desktop" data-name="google" data-redirect="" href="" 
+                    id="js-google-oauth-login" class="sso-button sso-button-google">
+            <span class="icon icon-oauth-google"></span>
+            <span class="sso-button-login-text">Google</span>
+        </a>
+    </div>
+</div>
+</section>
+

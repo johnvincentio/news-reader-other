@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="News Reader by John Vincent">
+    <meta name="keywords" content="News Reader, RSS, Rss Feed, XML, JSON, Mongo, Node, Sass, css, html5, aggregator">
+    <title>Register - News Reader</title>
+
+    <meta name="author" content="John Vincent">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.johnvincent.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://www.johnvincent.io/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.johnvincent.io/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://www.johnvincent.io/favicons/manifest.json">
+    <link rel="mask-icon" href="https://www.johnvincent.io/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://www.johnvincent.io/favicons/favicon.ico">
+    <meta name="msapplication-config" content="https://www.johnvincent.io/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+   <!-- load Google fonts: https://fonts.google.com -->
+    <link href="https://fonts.google.com/?selection.family=Roboto:100,300,400,500" rel="stylesheet">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/login/main-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="/assets/css/login/main.css">
+    <!--<![endif]-->
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="/">My News</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="outer">
+            <div class="inner">
+                <header role="banner">
+                    <h2>Sign Up</h2>
+                </header>
+
+                <nav role="navigation">
+                    <p>Already have an account? 
+                        <a href="/login">Log in here</a>
+                    </p>
+                </nav>
+
+                <section>
+                    <button class="pure-button facebook-button">
+                        <span>
+                            Log in with Facebook
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                    <button class="pure-button google-button">
+                        <span>
+                            Log in with Google
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </section>
+
+                <section class="oauth-separator-wrap">
+                    <span class="oauth-separator-txt">or</span>
+                </section>
+
+                <form id="js--submit-form" role="form" class="pure-form sign-up-form" method="post">
+                    <div class="js--error-msg is-center form-error"></div>
+                    <fieldset name="contact-info">
+                        <div class="pure-g">
+                            <div class="pure-u-1-24 pure-u-md-4-24"></div>
+                            <div class="pure-u-22-24 pure-u-md-16-24">
+                                <input class="pure-u-23-24" id="email" name="email" type="email" required placeholder="Email Address"
+                                    itemprop="email" itemscope itemtype="http://schema.org/Person"/>
+                            </div>
+                            <div class="pure-u-1-24 pure-u-md-4-24"></div>
+
+                            <div class="pure-u-1-24 pure-u-md-4-24"></div>
+                            <div class="pure-u-22-24 pure-u-md-16-24">
+                                <input class="pure-u-23-24" id="password" name="password" type="password" required placeholder="Password"
+                                    itemprop="accessCode" itemscope itemtype="http://schema.org/Thing"/>
+                            </div>
+                            <div class="pure-u-1-24 pure-u-md-4-24"></div>
+        
+                        </div>
+                    </fieldset>
+
+                    <nav role="navigation">
+                        <p>By creating an account, you agree to the  
+                            <a href="/terms-of-service">Terms of Service</a>
+                            and 
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </p>
+                    </nav>
+
+                    <button class="pure-button submit-button" type="submit">Create Account</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+$('#js--submit-form').submit(function(event) {
+	event.preventDefault();
+	$.ajax({
+		url:'/auth/register',
+		method: 'POST',
+		data: {
+			email: $(this).find('#email').val(),
+			password: $(this).find('#password').val()
+		}
+	}).done(function(token) {
+		window.location.href = '/registered';
+	}).catch(function(error) {
+        var errmsg = 'Error';
+        if (error.status === 401) {
+            errmsg = 'Error Unauthorized';
+        }
+        else {
+            errmsg = error.responseJSON.message;            
+        }
+        $('.js--error-msg').text(`Error: ${errmsg}`);
+	});
+});
+</script>
+
+</body>
+
+</html>

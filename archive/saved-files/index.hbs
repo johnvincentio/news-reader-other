@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+{{# if condition }}
+    Condition is met
+{{ else }}
+   Condition not met
+{{/if}}
+
+{{# each anyArray as |val key|}}
+    {{ key }}: {{ val }}
+{{/each}}
+
+{{!--<h1> Editing</h1> 
+ <form method="post" action = "/update/{{todo._id}}"> 
+  <input type="text" name = "updated_task"> 
+  <input type = "submit"> 
+ </form>
+ --}}
