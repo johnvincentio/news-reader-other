@@ -1,5 +1,13 @@
 
+/*secrets to align text and icons*/
+/*
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+*/
+
 @import '_variables';
+@import 'vendor/_normalize';
 
 /********/
 /* BASE */
@@ -97,33 +105,8 @@ html {
 
 @import '_responsive';
 
-/*secrets to align text and icons*/
-/*
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
-*/
-
-
-
-/*
-
-body,
-html {
-    background-color: rgb(27, 188, 155);
-    color: $primary-text-color;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: $font-stack;
-    --cover-min-height: 100px;
-}
-*/
-
-
 /*
 header {
-    // background-color: #ffffff;
-    background-color: palette(primary, light);
     padding: 25px 0 15px 0;
     h1 {
         text-transform: uppercase;
@@ -155,3 +138,4 @@ header {
     }
 }
 */
+
