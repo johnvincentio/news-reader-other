@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+    <style>
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:
+        [full-start] minmax(1em, 1fr) 
+        [main-start] minmax(0, 40em) [main-end] 
+        minmax(1em, 1fr) [full-end]
+}
+
+.grid > * {
+    grid-column: [main-start];
+    background-color: red;
+}
+
+.grid > .full {
+    grid-column: [full-start] - [full-end]
+    background-color: blue;
+}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>Content</div>
+        <div class="full">Full width</div>
+        <div>Content</div>
+    </div>
+</body>
+</html>

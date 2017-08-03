@@ -1,0 +1,313 @@
+@media (max-width: 1300px){
+	.second-section .features-blocks .block .label{
+		font-size: 14px;
+	}
+	#meetus .slick-slide{
+        padding: 0 20px 40px;
+    }
+	footer a.bg-link{
+		width: 85%;
+	}
+}
+
+@media (max-width: 991px){
+	/* Show Mobile menu on tablet */
+	body {
+	   margin-top: 82px 
+	}
+	.navbar-header {
+	        float: none;
+	    }
+	    .navbar-left,.navbar-right {
+	        float: none !important;
+	    }
+	    .navbar-toggle {
+	        display: block;
+	    }
+	    .navbar-collapse {
+	        border-top: 1px solid transparent;
+	        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	    }
+	    .navbar-fixed-top {
+	        top: 0;
+	        border-width: 0 0 1px;
+	    }
+	    .navbar-collapse.collapse {
+	        display: none!important;
+	    }
+	    .navbar-nav {
+	        float: none!important;
+	    }
+	    .navbar-nav>li {
+	        float: none;
+	        padding: 5px 0;
+	    }
+	    
+	    .navbar-nav>li:first-child {
+	        padding-top: 25px;
+	    }
+	    
+	    .navbar-nav>li>a {
+	        padding-top: 10px;
+	        padding-bottom: 10px;
+	    }
+	    
+	    .collapse.in{
+	        display:block !important;
+	    }
+		a.schedule-demo-link-tablet{
+			display: inline-block;
+		}
+	.collapse-menu-wrap{
+		display: flex;
+		align-items: center;
+	}
+	.Hero {
+	    font-size: 50px;
+	}
+	
+	h2, .H2-center {
+	    font-size: 26px
+	}
+	/* Modal forms*/
+	.modal .modal-close-top{
+		right: 15px;
+		top: 15px;
+	}
+
+	.banner-section .banner-content{
+		height: 700px;
+	}
+	.first-section .small-container{
+		width: 100%;
+	}
+	.second-section .features-blocks .block{
+		width: 50%;
+	}
+	.fourth-section .about-cards{
+    justify-content: space-between;
+	}
+	.fourth-section .about-cards .card{
+    width: 48%;
+	}
+	.fourth-section .about-cards .card .card-img img{
+		height: 250px;
+	}
+	#meetus .next, #meetus .prev{
+		width: 220px;
+	}
+
+	footer #text-4{
+		display: none;
+	}
+	header.sticky .header-inner{
+		padding: 15px;
+	}
+	header .header-inner{
+		padding: 15px;
+		flex-wrap: wrap;
+	}
+	.brand img {
+	    width: 170px;
+	}
+	.navbar-collapse.collapse{
+		padding: 0;
+		width: 100%;
+	}
+	#primary-top-menu{
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+	}
+	.navbar-nav>li.schedule-demo-link{
+		display: none;
+	}
+	.navbar-nav>li>a{
+		font-size: 14px;
+		padding-left: 10px;
+    padding-right: 10px;
+	}
+	#partners .img-wrap img{
+		width: 150px;
+	}
+	body #menu-primary-menu{
+		margin: 0 !important;
+	}
+}
+
+@media (max-width: 640px){
+	h2{
+		font-size: 20px;
+	}
+	h2.blue-center{
+		font-size: 14px;
+	}
+	a.schedule-demo-link-tablet{
+		display: none;
+	}
+	.navbar-nav>li.schedule-demo-link{
+		display: inline-block;
+	}
+	.banner-section .banner-content{
+		height: auto;
+	}
+	.Hero{
+		font-size: 30px;
+		text-align: center;
+	}
+	.Hero-subtitle{
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	.banner-section .hero-btn{
+		text-align: center;
+	}
+	.H2-center{
+		font-size: 20px;
+		text-align: center;
+	}
+	.first-section {
+	    padding-top: 50px;
+	}
+	.first-section .H2-center{
+		margin-bottom: 50px;
+	}
+	.first-section .benefits .benefit-wrap .benefit-img{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.second-section .features-blocks-mobile{
+	  display: block;
+	}
+	.second-section .features-blocks{
+		display: none;
+	}
+	.third-section .title{
+		font-size: 20px;
+	}
+	.padding-section{
+		padding: 45px 0;
+	}
+	.second-section{
+		padding: 45px 0 0;
+	}
+	.panel-group{
+		margin-bottom: 0;
+	}
+	.panel-heading{
+		padding: 15px;
+	}
+	label, .label{
+		font-size: 14px;
+	}
+	#meetus .next, #meetus .prev{
+		width: 50px;
+	}
+	#meetus .slick-slide .meet-block .bg-link{
+		display: block;
+		width: 230px;
+		max-width: 100%;
+	}
+	#partners .label{
+		text-align: center;
+		white-space: normal;
+	}
+	/* Modal Forms */
+	.hero{
+		font-size: 28px;
+	}
+	.modal-dialog {
+	    margin: 25px;
+	}
+	.modal .modal-dialog .modal-content .form-header .dropdown .formLinkDropdown{
+		font-size: 16px;
+	}
+	.modal .modal-dialog .modal-content .form-body .group input{
+		height: 40px;
+		box-shadow: none;
+		border-radius: 0 !important;
+	}
+	.modal .modal-dialog .modal-content .form-body input[type="submit"]{
+		border-radius: 5px !important;
+	}
+	.modal .form-subheader{
+		margin-bottom: 15px !important;
+	}
+	.modal .modal-dialog .modal-content .form-body .group.text-right{
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.modal .modal-dialog .modal-content .form-body .group.custom-switcher span.txt{
+		font-size: 13px;
+		line-height: 1;
+	}
+	.modal .modal-dialog .modal-content .form-body .group textarea{
+		height: 100px;
+		box-shadow: none !important;
+	}
+	.modal .modal-close-top img{
+		width: 30px;
+	}
+	.form-wrap .form-body .group input{
+		height: 40px;
+		box-shadow: none;
+		border-radius: 0 !important;
+	}
+	.form-wrap .form-body input[type="submit"]{
+		border-radius: 5px !important;
+	}
+	.form-wrap .form-subheader{
+		margin-bottom: 15px !important;
+	}
+	.form-wrap .form-body .group.text-right{
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.form-wrap .form-body .group.custom-switcher span.txt{
+		font-size: 13px;
+		line-height: 1;
+	}
+	.form-wrap .form-body .group textarea{
+		height: 100px;
+		box-shadow: none !important;
+	}
+	.form-wrap .modal-close-top img{
+		width: 30px;
+	}
+	.fourth-section .social-links-group{
+		margin-left: 0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		/*margin-top: 15px;*/
+	}
+	.fourth-section .contact-block a.bg-link{
+		margin-right: 55px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.error404 .not-found-inner{
+		text-align: center !important;
+	}
+	.history-back {
+	    top: 20px;
+	    right: 20px;
+	}
+}
+
+@media (max-width: 320px){
+	.modal .modal-close-top{
+		display: none;
+	}
+	.hero{
+		font-size: 25px;
+	}
+	.modal .form-subheader{
+		margin-bottom: 5px;
+		font-size: 13px;
+	}
+	.form-wrap .form-subheader{
+		margin-bottom: 5px;
+		font-size: 13px;
+	}
+}
