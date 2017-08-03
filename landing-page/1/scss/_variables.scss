@@ -1,0 +1,61 @@
+
+/*************/
+/* VARIABLES */
+/*************/
+
+// $color-white: #fff;
+// $color-black: #000;
+
+$color-sec: #555555;
+$color-ter: #92BCEA;
+
+// $primary-text-color: #7f8c8d;
+
+
+// Collection of colors
+
+$app-colors: (
+    primary: rgb(27, 188, 155),
+    dark-color: #2d3e50,
+    light-color: #ebebeb,
+    item-color: #6FBEF3,
+    item-select-color: #AECFE5
+);
+@function app-color($key: 'primary') {
+    @return map-get($app-colors, $key);
+}
+
+// Palettes of colors
+
+$palettes: (
+    primary: (
+        base: app-color('primary'),
+        light: lighten(app-color('primary'), 8%),
+        dark: darken(app-color('primary'), 8%),
+        tinted: mix(white, app-color('primary'), 10%),
+        shaded: mix(black, app-color('primary'), 10%)
+    ),
+    header: (
+        base: app-color('dark-color'),
+        text: app-color('item-color'),
+        select: lighten(app-color('item-color'), 15%)
+    ),
+    main: (
+        base: app-color('light-color'),
+        text: app-color('dark-color'),        
+    )
+);
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// color: palette(header, text);
+// color: palette(introduction, text);
+// color: palette(header, select);
+// color: palette(primary, light);
+
+
+$fa-font-path: "../fonts/font-awesome";
+@import "vendor/font-awesome/font-awesome";
+
+$font-stack: 'Roboto Condensed', sans-serif;
