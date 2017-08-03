@@ -1,22 +1,50 @@
+
+
+function hasClass(el, className) {
+  if (el.classList) {
+    return el.classList.contains(className);
+  }
+  return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+}
+
+function addClass(el, className) {
+  if (el.classList) {
+    el.classList.add(className);
+  }
+  else if (!hasClass(el, className)) {
+      el.className += " " + className
+  }
+}
+
+function removeClass(el, className) {
+  if (el.classList) {
+    el.classList.remove(className);
+  }
+  else if (hasClass(el, className)) {
+    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+    el.className=el.className.replace(reg, ' ')
+  }
+}
+
 (function(window, document) {
-
-  /* Mobile navigation */
-
-  $(".js--nav-icon").click(function() {
-    var nav = $(".js--main-nav");
-    var icon = $(".js--nav-icon i");
-
-    nav.slideToggle(200);
-
-    if (icon.hasClass("fa-bars")) {
-      icon.addClass("fa-times");
-      icon.removeClass("fa-bars");
+    var nav = document.getElementById('js--header-nav');
+    var toggle = document.getElementById('js--header-nav-toggle');
+    var icon = document.querySelector('#js--header-nav-toggle i');
+      
+  // Change Visibility On Click
+  toggle.addEventListener('click', function() {
+    if (hasClass(nav, 'is-closed')) {
+        removeClass(nav, 'is-closed');
+      removeClass(icon, 'fa-bars');
+      addClass(icon, 'fa-times');
     }
     else {
-      icon.addClass("fa-bars");
-      icon.removeClass("fa-times");
+        addClass(nav, 'is-closed');
+        removeClass(icon, 'fa-times');
+        addClass(icon, 'fa-bars');
     }
-  });
+  })
+})(this, this.document);
 
 
 // from newsreader
@@ -86,7 +114,7 @@
   window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 */
 
-})(this, this.document);
+
 
 
 /*

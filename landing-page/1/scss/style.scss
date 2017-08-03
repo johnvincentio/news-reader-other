@@ -1,3 +1,179 @@
+/*************/
+/* VARIABLES */
+/*************/
+
+$color-pri: #111111;
+$color-sec: #555555;
+$color-ter: #92BCEA;
+$primary-background-color: rgb(27, 188, 155);
+$primary-text-color: #7f8c8d;
+
+$fa-font-path: "../fonts/font-awesome";
+@import "vendor/font-awesome/font-awesome";
+
+$font-stack: 'Roboto Condensed', sans-serif;
+
+/********/
+/* BASE */
+/********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: rgb(27, 188, 155);
+    color: $primary-text-color;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-stack;
+    --cover-min-height: 100px;
+}
+
+.hide {
+    display: none!important;
+}
+
+.is-closed {
+    display: none;
+}
+
+/**********/
+/* LAYOUT */
+/**********/
+
+#header {
+    position: relative;
+
+    .header-content {
+        width: 100%;
+
+        .header-logo {
+            padding: 1em;
+            background: $color-pri;
+
+            .logo {
+                color: #fff;
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+        .header-nav {
+            padding: 1em;
+            background: $color-sec;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    width: 100%;
+                    margin: 0 0 1em 0;
+                    display: block;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .header-nav-toggle {
+            color: #fff;
+            font-size: 2em;
+            position: absolute;
+            top: .5em;
+            right: .5em;
+            z-index: 1;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.85;
+                text-decoration: none;
+                border: none;
+            }
+        }
+    }
+}
+
+
+/***********/
+/* MODULES */
+/***********/
+
+
+/* Measure */
+
+.measure {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media screen and (min-width: 600px) {
+
+#header {
+    padding: 1em;
+    background: $color-pri;
+
+    .header-content {
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .header-logo {
+            padding: 0;
+            background: none;
+            float: left;
+
+            .logo {
+                color: #fff;
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+        .header-nav {
+            padding: .5em;
+            background: none;
+            float: right;
+            display: block;
+
+            ul li {
+                width: auto;
+                margin: 0 .5em;
+                display: inline-block;
+            }
+        }
+
+        .header-nav-toggle {
+            display: none;
+        }
+    }
+}
+
+
+}
+
+
 /*secrets to align text and icons*/
 
 
@@ -7,6 +183,8 @@
     margin-top: -5px;
 */
 
+
+/*
 $primary: rebeccapurple;
 $palettes: ( primary: ( base: $primary, light: lighten($primary, 8%), dark: darken($primary, 8%)), grey: ());
 @function palette($palette, $tone: 'base') {
@@ -26,16 +204,13 @@ $palettes: ( primary: ( base: $primary, light: lighten($primary, 8%), dark: dark
 // color: palette(primary, light);
 $color-white: #fff;
 $color-black: #000;
-$fa-font-path: "../fonts/font-awesome";
-@import "vendor/font-awesome/font-awesome";
-// $font-stack: Arial, sans-serif;
-$font-stack: 'Roboto Condensed',
-sans-serif;
-$primary-background-color: rgb(27, 188, 155);
-$primary-text-color: #7f8c8d;
 
 
 
+*/
+
+
+/*
 
 * {
     box-sizing: border-box;
@@ -48,6 +223,7 @@ html {
     background-color: rgb(27, 188, 155);
     color: $primary-text-color;
     font-size: 16px;
+    font-weight: 400;
     font-family: $font-stack;
     --cover-min-height: 100px;
 }
@@ -57,26 +233,9 @@ html {
     margin: 0 auto;
 }
 
-.hide {
-    display: none;
-}
 
-/* Mobile navi */
 
-// mobile
 
-.mobile-nav-icon {
-    display: block;
-    float: right;
-    margin-top: 30px;
-    cursor: pointer;
-    i {
-        font-size: 200%;
-        color: #fff;
-    }
-}
-
-/* Main navi */
 
 .main-nav {
     display: none;
@@ -132,8 +291,7 @@ html {
     border-bottom: 2px solid #e67e22;
 }
 }
-
-
+*/
 
 
 /*
@@ -171,6 +329,7 @@ header {
     }
 }
 */
+
 
 /*
 .introduction {
@@ -228,7 +387,9 @@ header {
 }
 */
 
-/* Mobile
+
+/*
+Mobile
 @media screen and (max-width: 520px) {
   header {
     text-align: center;
@@ -244,44 +405,5 @@ header {
     flex-basis: 100%;
   }
 }
-/* Small phones to small tablets: from 481px to 767px */
 
-/*
-@media only screen and (max-width: 767px) {
-    body {
-        font-size: 16px;
-    }
-    section {
-        padding: 30px 0;
-    }
-    .row,
-    .hero-text-box {
-        padding: 0 4%;
-    }
-    .col {
-        width: 100%;
-        margin: 0 0 4% 0;
-    }
-    .main-nav {
-        display: none;
-    }
-    .mobile-nav-icon {
-        display: inline-block;
-    }
-    .main-nav {
-        float: left;
-        margin-top: 30px;
-        margin-left: 25px;
-    }
-    .main-nav li {
-        display: block;
-    }
-    .main-nav li a:link,
-    .main-nav li a:visited {
-        display: block;
-        border: 0;
-        padding: 10px 0;
-        font-size: 100%;
-    }
-}
 */
