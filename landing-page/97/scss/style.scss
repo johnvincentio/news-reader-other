@@ -1,0 +1,156 @@
+
+@import '_variables';
+
+/********/
+/* BASE */
+/********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: palette(main, text);
+    background-color: palette(main);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-stack;
+    --cover-min-height: 100px;
+}
+
+.hide {
+    display: none!important;
+}
+
+.is-closed {
+    display: none;
+}
+
+/**********/
+/* LAYOUT */
+/**********/
+
+@import '_header';
+
+
+/***********/
+/* MODULES */
+/***********/
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 300;
+    line-height: 5px;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    li {
+        text-align: center;
+        flex-basis: 50%;
+        h1 {
+            &:before {
+                font-family: FontAwesome;
+                font-size: 6rem;
+                display: block;
+                text-align: center;
+                position: relative;
+            }
+        }
+    }
+    li:nth-child(1) h1:before {
+        content: '\f135';
+    }
+    li:nth-child(2) h1:before {
+        content: '\f109';
+    }
+    li:nth-child(3) h1:before {
+        content: '\f1ea';
+    }
+    li:nth-child(4) h1:before {
+        content: '\f0eb';
+    }
+}
+
+@import '_responsive';
+
+/*secrets to align text and icons*/
+/*
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+*/
+
+
+
+/*
+
+body,
+html {
+    background-color: rgb(27, 188, 155);
+    color: $primary-text-color;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-stack;
+    --cover-min-height: 100px;
+}
+*/
+
+
+/*
+header {
+    // background-color: #ffffff;
+    background-color: palette(primary, light);
+    padding: 25px 0 15px 0;
+    h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 3rem;
+        color: rgb(27, 188, 155);
+        display: inline;
+        span {
+            font-weight: bold;
+        }
+    }
+    nav {
+        list-style-type: none;
+        display: inline;
+        ul {
+            padding: 0;
+            display: inline;
+            li {
+                display: inline;
+                margin-right: 20px;
+                text-transform: uppercase;
+                color: rgb(27, 188, 155);
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+*/

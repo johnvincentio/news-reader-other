@@ -1,0 +1,65 @@
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media screen and (max-width: 520px) {
+  header {
+    text-align: center;
+  }
+  .introduction {
+    line-height: normal;
+  }
+  .container {
+    width: 100%;
+  }
+  .features li {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+#header {
+    padding: 1em;
+
+    .header-content {
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .header-logo {
+            padding: 0;
+            background: none;
+            float: left;
+
+            .logo {
+                color: #fff;
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+        .header-nav {
+            padding: .5em;
+            background: none;
+            float: right;
+            display: block;
+
+            ul li {
+                width: auto;
+                margin: 0 .5em;
+                display: inline-block;
+            }
+        }
+
+        .header-nav-toggle {
+            display: none;
+        }
+    }
+}
+
+
+}
+
