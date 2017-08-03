@@ -1,4 +1,3 @@
-(function () {
 
 function hasClass(el, className) {
   if (el.classList) {
@@ -26,22 +25,22 @@ function removeClass(el, className) {
   }
 }
 
+(function () {
     var nav = document.getElementById('header-nav');
     var toggle = document.getElementById('header-nav-toggle');
-    var icon = document.querySelector("#header-nav-toggle i");
+    var icon = document.querySelector('#header-nav-toggle i');
       
-    nav.className = 'is-hidden';
-    toggle.className = 'is-visible';
+    nav.className = 'is-closed';
   
   // Change Visibility On Click
   toggle.addEventListener('click', function() {
-    if (nav.className === 'is-hidden') {
+    if (nav.className === 'is-closed') {
       nav.className = '';
       removeClass(icon, 'fa-bars');
       addClass(icon, 'fa-times');
     }
     else {
-        nav.className = 'is-hidden';
+        nav.className = 'is-closed';
         removeClass(icon, 'fa-times');
         addClass(icon, 'fa-bars');
     }

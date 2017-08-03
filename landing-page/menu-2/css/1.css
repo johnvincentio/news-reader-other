@@ -101,13 +101,8 @@ body {
 /* MODIFIERS */
 /*************/
 /* line 58, ../scss/1.scss */
-.is-hidden {
+.is-closed {
   display: none;
-}
-
-/* line 59, ../scss/1.scss */
-.is-visible {
-  display: block;
 }
 
 /*****************/
@@ -115,27 +110,27 @@ body {
 /*****************/
 @media screen and (min-width: 600px) {
   /* Header */
-  /* line 68, ../scss/1.scss */
+  /* line 66, ../scss/1.scss */
   #header {
     padding: 1em;
     background: #111111;
   }
 
-  /* line 69, ../scss/1.scss */
+  /* line 67, ../scss/1.scss */
   #header-content {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
   }
 
-  /* line 70, ../scss/1.scss */
+  /* line 68, ../scss/1.scss */
   #header-logo {
     padding: 0;
     background: none;
     float: left;
   }
 
-  /* line 71, ../scss/1.scss */
+  /* line 69, ../scss/1.scss */
   #header-nav {
     padding: .5em;
     background: none;
@@ -143,13 +138,13 @@ body {
     display: block;
   }
 
-  /* line 72, ../scss/1.scss */
+  /* line 70, ../scss/1.scss */
   #header-nav-toggle {
     display: none;
   }
 
   /* Nav */
-  /* line 75, ../scss/1.scss */
+  /* line 73, ../scss/1.scss */
   .nav li {
     width: auto;
     margin: 0 .5em;
