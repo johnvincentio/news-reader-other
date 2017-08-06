@@ -2,26 +2,30 @@
 header {
     background-color: palette(header, base);
     color: palette(header, text);
+
+    padding: 25px 0 15px 0;
     text-align: center;
     position: relative;
 
-    .header-content {
+    .header-container {
         width: 100%;
 
         .header-logo {
             padding: 1em;
-            .logo {
-                font-weight: 700;
-                margin: 0;
+            h1 {
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 3rem;
+                span {
+                    font-weight: bold;
+                }
             }
         }
 
-        .header-nav {
+        nav {
             padding: 1em;
             ul {
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
                 li {
                     width: 100%;
                     margin: 0 0 1em 0;
@@ -32,6 +36,7 @@ header {
                     a {
                         color: palette(header, text);
                         text-decoration: none;
+                        text-transform: uppercase;
                         &:hover,
                         &:focus {
                             background: none;
@@ -47,8 +52,8 @@ header {
             color: palette(header, text);
             font-size: 2em;
             position: absolute;
-            top: .5em;
-            right: .5em;
+            top: 1.7em;
+            right: .3em;
             z-index: 1;
             cursor: pointer;
             &:hover {

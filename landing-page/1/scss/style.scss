@@ -7,7 +7,19 @@
 */
 
 @import '_variables';
-@import 'vendor/_normalize';
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// @import 'vendor/_normalize';
 
 /********/
 /* BASE */
@@ -21,8 +33,6 @@
 
 body,
 html {
-    color: palette(main, text);
-    background-color: palette(main);
     font-size: 16px;
     font-weight: 400;
     font-family: $font-stack;
@@ -37,71 +47,13 @@ html {
     display: none;
 }
 
-/**********/
-/* LAYOUT */
-/**********/
+.clearfix {
+    @include clearfix;
+}
 
 @import '_header';
 
-
-/***********/
-/* MODULES */
-/***********/
-
-.container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.introduction {
-    line-height: normal;
-    text-align: center;
-    margin-top: 100px;
-    font-weight: 300;
-
-    h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    p {
-        font-size: 1.5rem;
-    }
-}
-
-.features {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    li {
-        text-align: center;
-        flex-basis: 100%;
-        h1 {
-            &:before {
-                font-family: FontAwesome;
-                font-size: 6rem;
-                display: block;
-                text-align: center;
-                position: relative;
-            }
-        }
-    }
-    li:nth-child(1) h1:before {
-        content: '\f135';
-    }
-    li:nth-child(2) h1:before {
-        content: '\f109';
-    }
-    li:nth-child(3) h1:before {
-        content: '\f1ea';
-    }
-    li:nth-child(4) h1:before {
-        content: '\f0eb';
-    }
-}
+@import '_main';
 
 @import '_responsive';
 

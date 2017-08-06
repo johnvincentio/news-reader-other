@@ -1,0 +1,58 @@
+
+main {
+    color: palette(main, text);
+    background-color: palette(main);
+
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    .introduction {
+        border: 1px solid blue;
+        background-color: palette(primary);
+        line-height: normal;
+        text-align: center;
+        font-weight: 300;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .features {
+        border: 1px solid red;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            text-align: center;
+            flex-basis: 100%;
+            h1 {
+                &:before {
+                    font-family: FontAwesome;
+                    font-size: 6rem;
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                }
+            }
+        }
+        li:nth-child(1) h1:before {
+            content: '\f135';
+        }
+        li:nth-child(2) h1:before {
+            content: '\f109';
+        }
+        li:nth-child(3) h1:before {
+            content: '\f1ea';
+        }
+        li:nth-child(4) h1:before {
+            content: '\f0eb';
+        }
+    }
+}

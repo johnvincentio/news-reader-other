@@ -2,7 +2,9 @@
 /*************/
 /* VARIABLES */
 /*************/
-
+/*
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+*/
 // $color-white: #fff;
 // $color-black: #000;
 
@@ -15,11 +17,12 @@ $color-ter: #92BCEA;
 // Collection of colors
 
 $app-colors: (
-    primary: rgb(27, 188, 155),
+    primary: #1f8dd6,
     dark-color: #2d3e50,
     light-color: #ebebeb,
     item-color: #6FBEF3,
-    item-select-color: #AECFE5
+    white-color: #ffffff,
+    item-select-color: #AECFE5,
 );
 @function app-color($key: 'primary') {
     @return map-get($app-colors, $key);
@@ -37,7 +40,7 @@ $palettes: (
     ),
     header: (
         base: app-color('dark-color'),
-        text: app-color('item-color'),
+        text: app-color('white-color'),
         select: lighten(app-color('item-color'), 15%)
     ),
     main: (

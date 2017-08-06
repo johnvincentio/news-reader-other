@@ -1,30 +1,11 @@
 
-/*****************/
-/* MEDIA QUERIES */
-/*****************/
-
 @media screen and (min-width: 520px) {
-  header {
+
+header {
     text-align: left;
-  }
-  .introduction {
-    line-height: 5px;
-  }
-  .container {
-    width: 90%;
-  }
-  .features li {
-    text-align: center;
-    flex-basis: 50%;
-  }
-}
-
-@media screen and (min-width: 520px) {
-
-#header {
     padding: 1em;
 
-    .header-content {
+    .header-container {
         max-width: 800px;
         margin: 0 auto;
         overflow: hidden;
@@ -35,7 +16,7 @@
             float: left;
         }
 
-        .header-nav {
+        nav {
             padding: .5em;
             background: none;
             float: right;
@@ -54,6 +35,16 @@
     }
 }
 
+main {
+    width: 90%;
+    .introduction {
+//        line-height: 45px;
+    }
+
+    .features li {
+        flex-basis: 50%;
+    }
+}
 
 }
 
