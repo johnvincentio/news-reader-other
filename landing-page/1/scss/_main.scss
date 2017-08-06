@@ -8,11 +8,12 @@ main {
     margin: 0 auto;
 
     .introduction {
-        border: 1px solid blue;
+        border: 1px solid green;
         background-color: palette(primary);
         line-height: normal;
         text-align: center;
         font-weight: 300;
+        padding: 100px 0;
 
         h1 {
             font-size: 2.5rem;
@@ -29,6 +30,7 @@ main {
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        padding-top: 100px;
         li {
             text-align: center;
             flex-basis: 100%;
@@ -36,7 +38,7 @@ main {
                 &:before {
                     font-family: FontAwesome;
                     font-size: 6rem;
-                    display: block;
+//                    display: block;
                     text-align: center;
                     position: relative;
                 }

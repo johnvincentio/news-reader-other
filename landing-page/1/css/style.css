@@ -3762,17 +3762,54 @@
   clip: auto;
 }
 
+/* line 22, ../scss/style.scss */
+.glyph svg.icon {
+  width: 90px;
+}
+
+/* line 26, ../scss/style.scss */
+.kiwi {
+  fill: red;
+}
+
+/* line 30, ../scss/style.scss */
+.glyph {
+  display: inline-block;
+  width: 9em;
+  margin: 1em;
+  text-align: center;
+  vertical-align: top;
+  background: #FFF;
+  color: red;
+}
+
+/* line 39, ../scss/style.scss */
+.glyph .glyph-icon {
+  padding: 10px;
+  display: block;
+  font-family: "Flaticon";
+  font-size: 64px;
+  line-height: 1;
+}
+
+/* line 46, ../scss/style.scss */
+.glyph .glyph-icon:before {
+  font-size: 64px;
+  color: red;
+  margin-left: 0;
+}
+
 /********/
 /* BASE */
 /********/
-/* line 28, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* line 34, ../scss/style.scss */
+/* line 65, ../scss/style.scss */
 body,
 html {
   font-size: 16px;
@@ -3781,12 +3818,12 @@ html {
   --cover-min-height: 100px;
 }
 
-/* line 42, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 .hide {
   display: none !important;
 }
 
-/* line 46, ../scss/style.scss */
+/* line 77, ../scss/style.scss */
 .is-closed {
   display: none;
 }
@@ -3884,55 +3921,56 @@ main {
 }
 /* line 10, ../scss/_main.scss */
 main .introduction {
-  border: 1px solid blue;
+  border: 1px solid green;
   background-color: #1f8dd6;
   line-height: normal;
   text-align: center;
   font-weight: 300;
+  padding: 100px 0;
 }
-/* line 17, ../scss/_main.scss */
+/* line 18, ../scss/_main.scss */
 main .introduction h1 {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 22, ../scss/_main.scss */
+/* line 23, ../scss/_main.scss */
 main .introduction p {
   font-size: 1.5rem;
 }
-/* line 27, ../scss/_main.scss */
+/* line 28, ../scss/_main.scss */
 main .features {
   border: 1px solid red;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 100px;
 }
-/* line 32, ../scss/_main.scss */
+/* line 34, ../scss/_main.scss */
 main .features li {
   text-align: center;
   flex-basis: 100%;
 }
-/* line 36, ../scss/_main.scss */
+/* line 38, ../scss/_main.scss */
 main .features li h1:before {
   font-family: FontAwesome;
   font-size: 6rem;
-  display: block;
   text-align: center;
   position: relative;
 }
-/* line 45, ../scss/_main.scss */
+/* line 47, ../scss/_main.scss */
 main .features li:nth-child(1) h1:before {
   content: '\f135';
 }
-/* line 48, ../scss/_main.scss */
+/* line 50, ../scss/_main.scss */
 main .features li:nth-child(2) h1:before {
   content: '\f109';
 }
-/* line 51, ../scss/_main.scss */
+/* line 53, ../scss/_main.scss */
 main .features li:nth-child(3) h1:before {
   content: '\f1ea';
 }
-/* line 54, ../scss/_main.scss */
+/* line 56, ../scss/_main.scss */
 main .features li:nth-child(4) h1:before {
   content: '\f0eb';
 }
@@ -3977,7 +4015,7 @@ main .features li:nth-child(4) h1:before {
   main {
     width: 90%;
   }
-  /* line 44, ../scss/_responsive.scss */
+  /* line 41, ../scss/_responsive.scss */
   main .features li {
     flex-basis: 50%;
   }
