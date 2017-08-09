@@ -1,0 +1,166 @@
+// Reset
+// ============
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:root {
+	--palette-primary: #434396;
+	--palette-cta: #7777CC;
+	--palette-text-color: #424242;
+	--primary-font: 'Helvetica', sans-serif;
+}
+
+@mixin main-trans {
+	transition: transform 300ms ease-in-out;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	font-family: var(--primary-font);
+	color: var(--palette-text-color);
+	font-size: 0.9rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Site Wrapper
+// ============
+.site-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	// Site Content
+	&--menu-open {
+		.site-content {
+			@include main-trans;
+			transform: translate3d(260px, 0, 0);
+		}
+		
+		.side-menu {
+			@include main-trans;
+			transform: translate3d(0px, 0, 0);
+		}
+		
+		.exit-side-menu {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(white, 0.5);
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+		}
+	}
+}
+
+// Site Content
+// ============
+.site-content {
+	@include main-trans;
+	position: relative;
+	width: 100%;
+	padding: 1rem;
+}
+
+.site-header {
+	width: 100%;
+	background-color: var(--palette-primary);
+	float: left;
+	padding: 0.6rem;
+	margin-bottom: 1rem;
+	
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+
+.toggle-menu {
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.hamburger-line {
+	display: block;
+	background-color: white;
+	width: 20px;
+	height: 2px;
+	margin-bottom: 4px;
+	border-radius: 50px;
+}
+
+.site-title {
+	clear: both;
+	font-weight: normal;
+	font-size: 1rem;
+	color: var(--palette-primary);
+	position: relative;
+	
+	&:after {
+		content: '';
+		width: 26px;
+		height: 2px;
+		margin-bottom: 0.5rem;
+		background-color: var(--palette-primary);
+		position: absolute;
+		bottom: -15px;
+		left: 0;
+	}
+}
+
+// Side Menu
+// ============
+.side-menu {
+	@include main-trans;
+	position: absolute;
+	width: 260px;
+	height: 100%;
+	background-color: var(--palette-primary);
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	transform: translate3d(-260px, 0, 0);
+	padding: 1rem;
+	
+	a {
+		font-size: 1.3rem;
+		color: white;
+		text-decoration: none;
+		line-height: 3rem;
+		
+	}
+	
+	.has-sub-nav {
+		position: relative;
+	}
+	
+	&__sub-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate3d(-260px, 0, 0);
+	}
+}

@@ -1,0 +1,151 @@
+/* Reset */
+/* line 6, ../scss/a.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/a.scss */
+html {
+  height: 100%;
+}
+
+/* line 8, ../scss/a.scss */
+p {
+  padding: 10px 0;
+}
+
+/* line 9, ../scss/a.scss */
+body {
+  height: 100%;
+  font-family: arial;
+  position: relative;
+  background: #222;
+  overflow-x: hidden;
+}
+
+/* line 10, ../scss/a.scss */
+.floatl {
+  float: left;
+}
+
+/* line 11, ../scss/a.scss */
+.floatr {
+  float: right;
+}
+
+/* Side menu */
+/* line 14, ../scss/a.scss */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 250px;
+  background: #222;
+  color: #FFF;
+  padding: 20px;
+  text-transform: uppercase;
+}
+/* line 16, ../scss/a.scss */
+.sideMenu.left {
+  opacity: .5;
+  transform: translatex(-40px);
+  transition: 0.33s cubic-bezier(0.7, 0.15, 0.36, 1);
+}
+/* line 17, ../scss/a.scss */
+.sideMenu.right {
+  left: auto;
+  right: 0;
+}
+/* line 18, ../scss/a.scss */
+.sideMenu > ul {
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+/* line 19, ../scss/a.scss */
+.sideMenu > ul > li {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+/* line 20, ../scss/a.scss */
+.sideMenu > ul > li a {
+  color: #CCC;
+  text-decoration: none;
+  display: block;
+  line-height: 3.2;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0 -10px;
+  padding: 0 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 0.4s cubic-bezier(0.3, 0.8, 0.5, 1.08);
+}
+/* line 21, ../scss/a.scss */
+.sideMenu > ul > li a:hover {
+  color: #222;
+  text-indent: 250px;
+}
+/* line 22, ../scss/a.scss */
+.sideMenu > ul > li a::before {
+  content: attr(data-value);
+  color: #FFF;
+  float: left;
+  width: 250px;
+  margin-left: -250px;
+}
+
+/* Toggle button */
+/* line 29, ../scss/a.scss */
+.menuBtn {
+  display: inline-block;
+  background: #f1103a;
+  border-radius: 50px;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font: bold 1.7em/36px Courier New;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  text-shadow: 0 -5px, 0 5px;
+  transition: 0.15s;
+}
+/* line 30, ../scss/a.scss */
+.menuBtn:hover {
+  background: #222;
+}
+
+/* Content handing */
+/* line 34, ../scss/a.scss */
+#contentWrap {
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+  padding: 20px;
+  transition: 0.33s cubic-bezier(0.7, 0.15, 0.36, 1);
+}
+/* line 35, ../scss/a.scss */
+#sideToggle1:checked ~ #contentWrap {
+  border-radius: 8px;
+  transform: translatex(250px);
+}
+/* line 36, ../scss/a.scss */
+#sideToggle2:checked ~ #contentWrap {
+  transform: translatex(-250px);
+  border-radius: 8px;
+}
+
+/* line 39, ../scss/a.scss */
+#sideToggle1:checked ~ .sideMenu.left {
+  opacity: 1;
+  transform: none;
+}
+
+/*# sourceMappingURL=a.css.map */
