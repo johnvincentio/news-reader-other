@@ -1,4 +1,4 @@
-/* line 1, ../scss/main.scss */
+/* line 6, ../scss/main.scss */
 html,
 body {
   height: 100%;
@@ -7,7 +7,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 9, ../scss/main.scss */
+/* line 14, ../scss/main.scss */
+.hamburger-line {
+  display: block;
+  background-color: white;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+  border-radius: 50px;
+}
+
+/* line 23, ../scss/main.scss */
+.hide {
+  display: none;
+}
+
+/* line 60, ../scss/main.scss */
 .flex-master {
   display: flex;
   flex-direction: column;
@@ -17,7 +32,7 @@ body {
   overflow-y: hidden;
 }
 
-/* line 18, ../scss/main.scss */
+/* line 69, ../scss/main.scss */
 .page-header {
   /* fixed size */
   flex: none;
@@ -28,7 +43,7 @@ body {
   color: white;
 }
 
-/* line 28, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 .page-content {
   /* resize in container */
   flex: 1;
@@ -40,7 +55,7 @@ body {
   flex-direction: row;
 }
 
-/* line 39, ../scss/main.scss */
+/* line 90, ../scss/main.scss */
 .sidebar-left {
   flex: none;
   background: #838383;
@@ -52,7 +67,7 @@ body {
   white-space: nowrap;
 }
 
-/* line 50, ../scss/main.scss */
+/* line 101, ../scss/main.scss */
 .splitter {
   flex: none;
   width: 17px;
@@ -61,7 +76,7 @@ body {
   background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
 }
 
-/* line 58, ../scss/main.scss */
+/* line 109, ../scss/main.scss */
 .content-container {
   flex: 1 1 auto;
   background: #eee;
@@ -75,7 +90,7 @@ body {
   flex-direction: row;
 }
 
-/* line 71, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 .main-content {
   flex: 1 1 auto;
   width: 100%;
@@ -83,7 +98,7 @@ body {
   min-width: 300px;
 }
 
-/* line 78, ../scss/main.scss */
+/* line 129, ../scss/main.scss */
 .page-ads {
   flex: none;
   border-left: 1px solid silver;
@@ -96,7 +111,7 @@ body {
   flex-direction: column;
 }
 
-/* line 90, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .advert {
   flex: none;
   align-self: center;
@@ -113,7 +128,7 @@ body {
   align-items: center;
 }
 
-/* line 106, ../scss/main.scss */
+/* line 157, ../scss/main.scss */
 footer {
   flex: none;
   background: #535353;
@@ -122,7 +137,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* line 114, ../scss/main.scss */
+  /* line 165, ../scss/main.scss */
   .page-ads {
     display: none;
   }
