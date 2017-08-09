@@ -1,9 +1,4 @@
 
-@mixin main-trans {
-    // transition: transform 2.2s ease-in-out;
-    transition: transition width 1s;
-}
-
 html,
 body {
     height: 100%;
@@ -21,13 +16,46 @@ body {
 	border-radius: 50px;
 }
 
-.hide {
-//    @include main-trans();
-    display: none;
+.sidebar {
+//    flex: none;
+    width: 300px;
+//    padding: 20px;
+//	height:500px;
+	background: red;
+	position:relative;
+    display:inline-block;
+    overflow: auto;
+    white-space: nowrap;
+}
+// .sidebar{
+//     flex: none;
+//     background: #838383;
+//     padding: 20px;
+//     width: 250px;
+//     min-width: 150px;
+//     overflow: auto;
+//     color: white;
+//     white-space: nowrap;
+// }
+
+.invisible {
+	width: 0;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
 }
 
 .visible {
-    display: block;
+	width: 300px;
+	-webkit-transition: width .5s; 
+    transition: width .5s;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
+}
+
+.display {
+	display: none;
 }
 
 .flex-master {
@@ -60,24 +88,16 @@ body {
     flex-direction: row;
 }
 
-.sidebar-left {
-    flex: none;
-    background: #838383;
-    padding: 20px;
-    width: 250px;
-    min-width: 150px;
-    overflow: auto;
-    color: white;
-    white-space: nowrap;
-}
-
-.splitter {
-    flex: none;
-    width: 17px;
-    cursor: col-resize;
-    background: #535353;
-    background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
-}
+// .sidebar{
+//     flex: none;
+//     background: #838383;
+//     padding: 20px;
+//     width: 250px;
+//     min-width: 150px;
+//     overflow: auto;
+//     color: white;
+//     white-space: nowrap;
+// }
 
 .content-container {
     flex: 1 1 auto;

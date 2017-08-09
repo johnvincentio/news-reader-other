@@ -1,0 +1,28 @@
+.sidebar {
+	width:300px;
+	height:500px;
+	background: red;
+	position:relative;
+	display:inline-block;
+	
+}
+
+.invisible {
+	width: 0;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
+}
+
+.visible {
+	width: 300px;
+	-webkit-transition: width .5s; 
+    transition: width .5s;
+    -webkit-transition: width .5s; 
+    transition: width .5s;
+}
+
+.display {
+	display: none;
+}

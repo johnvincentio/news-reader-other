@@ -1,4 +1,4 @@
-/* line 7, ../scss/main.scss */
+/* line 2, ../scss/main.scss */
 html,
 body {
   height: 100%;
@@ -7,7 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 15, ../scss/main.scss */
+/* line 10, ../scss/main.scss */
 .hamburger-line {
   display: block;
   background-color: white;
@@ -17,17 +17,40 @@ body {
   border-radius: 50px;
 }
 
-/* line 24, ../scss/main.scss */
-.hide {
+/* line 19, ../scss/main.scss */
+.sidebar {
+  width: 300px;
+  background: red;
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* line 41, ../scss/main.scss */
+.invisible {
+  width: 0;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+/* line 49, ../scss/main.scss */
+.visible {
+  width: 300px;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+/* line 57, ../scss/main.scss */
+.display {
   display: none;
 }
 
-/* line 29, ../scss/main.scss */
-.visible {
-  display: block;
-}
-
-/* line 33, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 .flex-master {
   display: flex;
   flex-direction: column;
@@ -37,7 +60,7 @@ body {
   overflow-y: hidden;
 }
 
-/* line 42, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 .page-header {
   /* fixed size */
   flex: none;
@@ -48,7 +71,7 @@ body {
   color: white;
 }
 
-/* line 52, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .page-content {
   /* resize in container */
   flex: 1;
@@ -60,28 +83,7 @@ body {
   flex-direction: row;
 }
 
-/* line 63, ../scss/main.scss */
-.sidebar-left {
-  flex: none;
-  background: #838383;
-  padding: 20px;
-  width: 250px;
-  min-width: 150px;
-  overflow: auto;
-  color: white;
-  white-space: nowrap;
-}
-
-/* line 74, ../scss/main.scss */
-.splitter {
-  flex: none;
-  width: 17px;
-  cursor: col-resize;
-  background: #535353;
-  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
-}
-
-/* line 82, ../scss/main.scss */
+/* line 102, ../scss/main.scss */
 .content-container {
   flex: 1 1 auto;
   background: #eee;
@@ -95,7 +97,7 @@ body {
   flex-direction: row;
 }
 
-/* line 95, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
 .main-content {
   flex: 1 1 auto;
   width: 100%;
@@ -103,7 +105,7 @@ body {
   min-width: 300px;
 }
 
-/* line 102, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 .page-ads {
   flex: none;
   border-left: 1px solid silver;
@@ -116,7 +118,7 @@ body {
   flex-direction: column;
 }
 
-/* line 114, ../scss/main.scss */
+/* line 134, ../scss/main.scss */
 .advert {
   flex: none;
   align-self: center;
@@ -133,7 +135,7 @@ body {
   align-items: center;
 }
 
-/* line 130, ../scss/main.scss */
+/* line 150, ../scss/main.scss */
 footer {
   flex: none;
   background: #535353;
@@ -142,7 +144,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* line 138, ../scss/main.scss */
+  /* line 158, ../scss/main.scss */
   .page-ads {
     display: none;
   }
