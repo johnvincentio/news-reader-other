@@ -17,7 +17,12 @@ body {
   border-radius: 50px;
 }
 
-/* line 28, ../scss/main.scss */
+/* line 24, ../scss/main.scss */
+.hide {
+  display: none;
+}
+
+/* line 31, ../scss/main.scss */
 .flex-master {
   display: flex;
   flex-direction: column;
@@ -26,7 +31,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 }
-/* line 36, ../scss/main.scss */
+/* line 39, ../scss/main.scss */
 .flex-master .page-header {
   /* fixed size */
   flex: none;
@@ -36,9 +41,8 @@ body {
   background: #535353;
   color: white;
 }
-
-/* line 47, ../scss/main.scss */
-.page-content {
+/* line 49, ../scss/main.scss */
+.flex-master .page-content {
   /* resize in container */
   flex: 1;
   /* IMPORTANT for FireFox */
@@ -48,8 +52,29 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* line 57, ../scss/main.scss */
-.page-content .content-container {
+/* line 59, ../scss/main.scss */
+.flex-master .page-content .sidebar {
+  height: 400px;
+  background: blue;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 76, ../scss/main.scss */
+.flex-master .page-content .sidebar.invisible {
+  width: 0;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+/* line 82, ../scss/main.scss */
+.flex-master .page-content .sidebar.visible {
+  width: 300px;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+/* line 89, ../scss/main.scss */
+.flex-master .page-content .content-container {
   flex: 1 1 auto;
   background: #eee;
   padding: 20px;
@@ -61,15 +86,15 @@ body {
   /* new flex for content/ads*/
   flex-direction: row;
 }
-/* line 69, ../scss/main.scss */
-.page-content .content-container .main-content {
+/* line 101, ../scss/main.scss */
+.flex-master .page-content .content-container .main-content {
   flex: 1 1 auto;
   width: 100%;
   padding: 10px;
   min-width: 300px;
 }
 
-/* line 78, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 .page-ads {
   flex: none;
   border-left: 1px solid silver;
@@ -81,7 +106,7 @@ body {
   /* new flex for each ad*/
   flex-direction: column;
 }
-/* line 89, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 .page-ads .advert {
   flex: none;
   align-self: center;
@@ -98,7 +123,7 @@ body {
   align-items: center;
 }
 
-/* line 106, ../scss/main.scss */
+/* line 139, ../scss/main.scss */
 footer {
   flex: none;
   background: #535353;
@@ -106,45 +131,21 @@ footer {
   padding: 10px;
 }
 
-/* line 113, ../scss/main.scss */
-.sidebar {
-  height: 400px;
-  background: blue;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-/* line 130, ../scss/main.scss */
-.sidebar.invisible {
-  width: 0;
-  height: 0;
-  -webkit-transition: width .5s;
-  transition: width .5s;
-}
-/* line 137, ../scss/main.scss */
-.sidebar.visible {
-  width: 100%;
-  -webkit-transition: width .5s;
-  transition: width .5s;
-}
-
 @media (max-width: 900px) {
-  /* line 145, ../scss/main.scss */
+  /* line 147, ../scss/main.scss */
   .page-ads {
     background-color: yellow;
     display: none;
   }
 }
 @media (min-width: 750px) {
-  /* line 152, ../scss/main.scss */
-  .page-content {
+  /* line 155, ../scss/main.scss */
+  .flex-master .page-content {
     flex-direction: row;
   }
-
-  /* line 156, ../scss/main.scss */
-  .sidebar.visible {
-    width: 370px;
+  /* line 157, ../scss/main.scss */
+  .flex-master .page-content .sidebar {
+    width: 600px;
   }
 }
 
