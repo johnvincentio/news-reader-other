@@ -1,0 +1,146 @@
+/* line 2, ../scss/main.scss */
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 10, ../scss/main.scss */
+.hamburger-line {
+  display: block;
+  background-color: white;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+  border-radius: 50px;
+}
+
+/* line 19, ../scss/main.scss */
+.invisible {
+  width: 0;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+/* line 27, ../scss/main.scss */
+.visible {
+  width: 300px;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+/* line 35, ../scss/main.scss */
+.display {
+  display: none;
+}
+
+/* line 42, ../scss/main.scss */
+.flex-master {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* line 50, ../scss/main.scss */
+.flex-master .page-header {
+  /* fixed size */
+  flex: none;
+  padding: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  background: #535353;
+  color: white;
+}
+/* line 60, ../scss/main.scss */
+.flex-master .page-content {
+  /* resize in container */
+  flex: 1;
+  /* IMPORTANT for FireFox */
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* new flex container for content */
+  display: flex;
+  flex-direction: row;
+}
+/* line 70, ../scss/main.scss */
+.flex-master .page-content .sidebar {
+  width: 300px;
+  background: red;
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  white-space: nowrap;
+}
+/* line 82, ../scss/main.scss */
+.flex-master .page-content .content-container {
+  flex: 1 1 auto;
+  background: #eee;
+  padding: 20px;
+  width: 100%;
+  min-width: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  /* new flex for content/ads*/
+  flex-direction: row;
+}
+/* line 94, ../scss/main.scss */
+.flex-master .page-content .content-container .main-content {
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 10px;
+  min-width: 300px;
+}
+/* line 101, ../scss/main.scss */
+.flex-master .page-content .content-container .page-ads {
+  flex: none;
+  border-left: 1px solid silver;
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 180px;
+  overflow: hidden;
+  display: flex;
+  /* new flex for each ad*/
+  flex-direction: column;
+}
+/* line 112, ../scss/main.scss */
+.flex-master .page-content .content-container .page-ads .advert {
+  flex: none;
+  align-self: center;
+  padding: 5px;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  background: lightblue;
+  color: green;
+  overflow: hidden;
+  /* center ad text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 132, ../scss/main.scss */
+footer {
+  flex: none;
+  background: #535353;
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  /* line 140, ../scss/main.scss */
+  .page-ads {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
