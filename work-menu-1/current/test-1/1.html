@@ -1,0 +1,66 @@
+<html>
+    <head>
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+    border: 5px solid black
+}
+
+.item {
+    display: flex; /* new; nested flexbox */
+    flex: 1;
+    border-bottom: 1px solid white;
+}
+
+.item-inner {
+    display: flex; /* new; nested flexbox */
+    flex: 1; /* new */
+ 
+    /* height: 100%; <-- remove; unnecessary */
+    /* width: 100%; <-- remove; unnecessary */
+    /* display: table; <-- remove; unnecessary */  
+}
+
+a {
+    display: flex; /* new; nested flexbox */
+    flex: 1; /* new */
+    align-items: center; /* new; vertically center text */
+    background: orange;
+    
+ 
+    /* display: table-cell; <-- remove; unnecessary */
+    /* vertical-align: middle; <-- remove; unnecessary */
+    
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">
+                <div class="item-inner">
+                    <a>
+                        Botón
+                    </a>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="item-inner">
+                    <a>
+                        Botón
+                    </a>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="item-inner">
+                    <a>
+                        Botón
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
